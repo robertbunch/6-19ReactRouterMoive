@@ -26,7 +26,13 @@ class SingleMovie extends React.Component{
             return(<Spinner />)
         }
         return(
-            <img src={`http://image.tmdb.org/t/p/w300${this.state.movieData.production_companies[0].logo_path}`} />
+            <div>
+                <img src={`http://image.tmdb.org/t/p/w300${this.state.movieData.production_companies[0].logo_path}`} />
+                <h2>{this.state.movieData.tagline}</h2>
+                <p>{this.state.movieData.overview}</p>
+                <img src={`http://image.tmdb.org/t/p/w300${this.state.movieData.poster_path}`} />
+                <h2>Believe or not they spent ${this.state.movieData.budget} on this movie!</h2>
+            </div>
         )
     }
 }

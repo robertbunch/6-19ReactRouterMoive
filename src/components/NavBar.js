@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 class NavBar extends Component{
     constructor(){
@@ -11,6 +12,7 @@ class NavBar extends Component{
     search = (e)=>{
         e.preventDefault();
         const searchUrl = `/search/${this.state.searchTerm}`
+        console.log(this.props.history)
         // to programmatically move the browser to a new page
         this.props.history.push(searchUrl);
     }

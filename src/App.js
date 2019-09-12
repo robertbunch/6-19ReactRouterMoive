@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home';
 import SingleMovie from './components/SingleMovie'
 import NavBar from './components/NavBar';
+import Search from './components/Search'
 
 class App extends Component{
   render(){
@@ -12,8 +13,8 @@ class App extends Component{
 				<div className="row">
 					<Route path="/" component={NavBar} />
             		<Route exact path="/" component={Home} />
-					<Route path="/movie/:movieId" component={SingleMovie} />
-					<Route path="/search/:searchTerm" component={SearchPage} />
+					<Route exact path="/movie/:movieId" component={SingleMovie} />
+					<Route path="/search/:searchTerm" component={Search} />
 				</div>
 			</div>
         </Router>

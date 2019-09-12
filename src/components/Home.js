@@ -7,7 +7,7 @@ class Home extends Component{
     constructor(){
         super();
         this.state = {
-            movieList: []
+            movieList: ["test"],
         }
     }
 
